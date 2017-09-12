@@ -1,0 +1,26 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "an app that displays the current weather",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingPra/weather.git"
+  },
+  "keywords": [
+    "weather",
+    "app"
+  ],
+  "author": "king pra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingPra/weather/issues"
+  },
+  "homepage": "https://github.com/KingPra/weather#readme",
+  "devDependencies": {
+    "gulp-sass": "^3.1.0"
+  }
+}
