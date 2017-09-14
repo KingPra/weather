@@ -12,10 +12,8 @@
 
 .location {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  margin-left: -175px;
-  font-size: 2em; }
+  top: -10%;
+  font-size: 1.7em; }
 
 .forecast {
   position: absolute;
