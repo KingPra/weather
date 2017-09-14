@@ -19,10 +19,12 @@ function getWeather (position) {
     const wind = response.wind.speed;
     const condition = response.weather[0].description;
     const location = response.name;
+    const windDirection = degCompass(response.wind.deg);
+
     convertTemp(check.checked, temp);
     document.querySelector('.switch').classList.remove('visible');
     document.querySelector('.humidity').innerHTML = `Humidity: ${humidity}%`;
-    document.querySelector('.wind').innerHTML = `Wind: ${wind}mph`;
+    document.querySelector('.wind').innerHTML = `Wind: ${windDirection} ${wind}mph`;
     document.querySelector('.condition').innerHTML = condition;
     document.querySelector('.location').innerHTML = `Current Forecast for ${location}`;
   });
@@ -53,5 +55,13 @@ function convertTemp (val, temp) {
     console.log(check.checked);
     convertTemp(check.checked, temp);
   });
+
+
+const direction = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'];
+
+function degCompass (num) {
+  const degrees =  Math.trunc((num/22.5) + 0.5);
+  return direction[degrees]
+}
 
 },{}]},{},[1]);
