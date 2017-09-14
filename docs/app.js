@@ -2,18 +2,13 @@
 window.addEventListener('load', () => {
   getLocation();
 })
-
 let temp;
 
-function getWeather (position) {
-  const lat = position.coords.latitude;
-  const lon = position.coords.longitude;
-  console.log(`get weather ${lat}`);
+function getWeather (lat, lon) {
   let request = new XMLHttpRequest();
   request.open('GET', `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${lon}`)
   request.addEventListener('load', () => {
     let response = JSON.parse(request.responseText);
-    console.log(response)
     temp = response.main.temp;
     const humidity = response.main.humidity;
     const wind = response.wind.speed;
@@ -34,7 +29,9 @@ function getWeather (position) {
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
-          getWeather(position)
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          getWeather(lat, lon)
         });
     } else {
         console.log("Geolocation is not supported by this browser.");
@@ -44,7 +41,6 @@ function getLocation() {
 function convertTemp (val, temp) {
   let tempOut = document.querySelector('.temp');
   if(val === '' || val === false) {
-    console.log(temp)
     tempOut.innerHTML = `${Math.round(temp * 1.8 + 32)}&#8457`;
   }
   else tempOut.innerHTML = `${Math.round(temp)}&#8451`;
@@ -56,12 +52,42 @@ function convertTemp (val, temp) {
     convertTemp(check.checked, temp);
   });
 
-
-const direction = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'];
-
 function degCompass (num) {
+  const direction = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'];
   const degrees =  Math.trunc((num/22.5) + 0.5);
   return direction[degrees]
 }
+
+
+const addy = document.querySelector('.locate')
+  addy.addEventListener('keyup',(e) => {
+    let key = e.which || e.keyCode;
+    let address = addy.textContent;
+    console.log(address);
+    if (key === 13) {
+      getAddy(address);
+      }
+  })
+
+
+
+ function getAddy (addy) {
+   console.log(addy);
+   if (addy == 'undefined'|| addy === null || addy === '') {
+     let locate = document.querySelector('.locate');
+     locate.innerHTML = `<span contenteditable="true" class="locate">Please enter a valid zip code</span>`;
+  } else {
+    let request = new XMLHttpRequest();
+    request.open('GET', `https://maps.googleapis.com/maps/api/geocode/json?address=${addy}&key=AIzaSyCW15HLkARKoWKBePgLftUdKKQIyxaQYCM`)
+    request.addEventListener('load', () => {
+      let response = JSON.parse(request.responseText);
+
+      const lat = response.results[0].geometry.location.lat;
+      const lon = response.results[0].geometry.location.lng;
+      getWeather(lat, lon);
+    })
+    request.send();
+  }
+ }
 
 },{}]},{},[1]);
