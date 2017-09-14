@@ -6,13 +6,22 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="location">Current Forecast</div>
+    <input type="text" placeholder="enter your zip" class="zip">
     <div class="frame">
-      <div class="center">
-        <div class="weather"></div>
-        <div class="location">Current Weather at Charlotte</div>
-        <div class="info">
-          <div class="temp">76F</div>
-          <div class="sky">Cloudy</div>
+      <div class="weather"></div>
+      <div class="forecast">
+        <div class="box">
+          <div class="condition">Cloudy</div>
+          <div class="temp"></div>
+          <label class="switch visible">
+            <input type="checkbox" class="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="box">
+          <div class="wind padding">Wind: E 7km/h</div>
+          <div class="humidity padding">Humidity: 50%</div>
         </div>
       </div>
     </div>
