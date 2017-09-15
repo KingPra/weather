@@ -1,3 +1,7 @@
+$sky: #28bfed;
+$cloudy: #a3adaf;
+$night: #0a1359;
+
 .frame {
   position: absolute;
   top: 50%;
@@ -6,15 +10,19 @@
   height: 600px;
   margin-left: -300px;
   margin-top: -300px;
-  background: #000;
+  background: $sky;
   border-radius: 2px;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
 }
 
 .location {
   position: absolute;
-  top: -10%;
+  top: 0%;
   font-size: 1.7em;
+  background: grey;
+  padding: 5px;
+  z-index: 10;
 }
 
 .forecast {
@@ -26,6 +34,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
   grid-gap: 10px;
+  z-index: 10;
 }
 
 .box {
@@ -102,4 +111,310 @@ input:checked + .slider:before {
   -webkit-transform: translateY(20px);
   -ms-transform: translateY(20px);
   transform: translateY(20px);
+}
+
+.sun {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 40px 0 yellow;
+  animation: rise 2s ease-out;
+  z-index: 1;
+}
+
+.cloud {
+  display: none;
+  position: absolute;
+  top: 18%;
+  left: 23%;
+  z-index: 9;
+  animation: slide 5s ease-in-out;
+}
+
+.cloud-puff-1 {
+  position: relative;
+  width: 190px;
+  height: 90px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 0 10px 0 white;
+}
+
+.cloud-puff-2 {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  top: -35%;
+  left: 19.5%;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 white;
+}
+
+.cloud-2 {
+  position: absolute;
+  top: 15%;
+  left: -96%;
+
+  .cloud-puff-1 {
+    background: #f9f9f9;
+    box-shadow: 0 0 10px 0 #f9f9f9;
+  }
+
+  .cloud-puff-2 {
+    background: #f9f9f9;
+    box-shadow: 0 0 10px 0 #f9f9f9;
+  }
+}
+
+.hill-bg-1 {
+  position: absolute;
+  width: 337px;
+  height: 281px;
+  top: 55%;
+  left: -10%;
+  background: #307f00;
+  border-radius: 50%;
+  z-index: 5;
+  animation: left-slide 10s ease-in;
+}
+
+.hill-bg-2 {
+  @extend .hill-bg-1;
+  top: 55%;
+  left: 48%;
+}
+
+.hill-fg-1 {
+  @extend .hill-bg-1;
+  background: #44a30b;
+  top: 66%;
+  left: -24%;
+  box-shadow: 0 0 10px 0 #44930f;
+  animation: right-slide 10s ease-in;
+}
+
+.hill-fg-2 {
+  @extend .hill-fg-1;
+  top: 60%;
+  left: 19%;
+  box-shadow: 0 0 10px 0 #44930f;
+}
+
+.hill-fg-3 {
+  @extend .hill-fg-1;
+  top: 66%;
+  left: 60%;
+  box-shadow: 0 0 10px 0 #44930f;
+}
+
+.lightning {
+  display: none;
+  position: absolute;
+  top: 38%;
+  left: 34%;
+  z-index: 6;
+}
+
+.bolt-1 {
+  background: yellow;
+  height: 25px;
+  width: 50px;
+  -webkit-clip-path: polygon(100% 0, 38% 0, 0 100%);
+  clip-path: polygon(100% 0, 38% 0, 0 100%);
+}
+
+.bolt-2 {
+  @extend .bolt-1;
+  position: absolute;
+  top: -25px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.bolt-3 {
+  @extend .bolt-1;
+  position: absolute;
+  top: 9px;
+  right: 175px;
+}
+
+.bolt-4 {
+  @extend .bolt-3;
+  top: -15px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.rain {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: -5%;
+}
+
+.snow {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: -5%;
+}
+
+@for $i from 1 through 15 {
+
+  .rain-small-#{$i} {
+    position: absolute;
+    left: (($i - 1) * 40)+px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #cce2ff;
+    animation: drop (.9 + random(2) / 15) + s linear (random(50) / 15) + s infinite;;
+    animation-fill-mode: both;
+    transform-origin: 50% 100%;
+    z-index: 5;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: -1px;
+      left: 1px;
+      width: 7px;
+      height: 7px;
+      background: #cce2ff;
+      border-radius: 50%;
+    }
+  }
+
+  .rain-med-#{$i} {
+    position: absolute;
+    left: (($i - 1) * 40)+px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    animation: drop (.9 + random(2) / 15) + s linear (random(50) / 15) + s infinite;;
+    animation-fill-mode: both;
+    transform-origin: 50% 100%;
+    z-index: 6;
+
+    &:before {
+      position: absolute;
+      top: -1px;
+      left: 1px;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #cce2ff;
+      border-radius: 50%;
+    }
+  }
+
+  .snow-small-#{$i} {
+    position: absolute;
+    left: (($i - 1) * 40)+px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #cce2ff;
+    animation: drop (5 + random(2) / 15) + s linear (random(50) / 15) + s infinite;;
+    animation-fill-mode: both;
+    transform-origin: 50% 100%;
+    z-index: 5;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: -1px;
+      left: 1px;
+      width: 7px;
+      height: 7px;
+      background: #cce2ff;
+      border-radius: 50%;
+    }
+  }
+
+  .snow-med-#{$i} {
+    position: absolute;
+    left: (($i - 1) * 40)+px;
+    width: 7px;
+    height: 7px;
+    animation: drop (7 + random(2) / 15) + s linear (random(80) / 5) + s infinite;;
+    animation-fill-mode: both;
+    transform-origin: 50% 100%;
+    z-index: 6;
+
+    &:before {
+      position: absolute;
+      top: -1px;
+      left: 1px;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #cce2ff;
+      border-radius: 2px;
+    }
+  }
+}
+
+.fog {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  background: white;
+  opacity: 0.8;
+  z-index: 6;
+}
+
+
+@keyframes rise {
+  from {
+    transform: translate(-80px, 460px);
+  }
+  to {
+    transform: translate(0,0px);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translate(-400px, 0px);
+  }
+  to {
+    transform: translate(0,0px);
+  }
+}
+
+@keyframes left-slide {
+  from {
+    transform: translate(-20px, 0px);
+  }
+  to {
+    transform: translate(0,0px);
+  }
+}
+
+@keyframes right-slide {
+  from {
+    transform: translate(20px, 0px);
+  }
+  to {
+    transform: translate(0,0px);
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translate3d(50px, -490px, 0) scaleX(1) scaleY(1)
+    rotate(20deg)
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(200deg)
+  }
 }
