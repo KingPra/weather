@@ -15,6 +15,7 @@ function getWeather (lat, lon) {
     const condition = response.weather[0].description;
     const location = response.name;
     const windDirection = degCompass(response.wind.deg);
+    console.log(response);
 
     convertTemp(check.checked, temp);
     document.querySelector('.switch').classList.remove('visible');
@@ -22,6 +23,7 @@ function getWeather (lat, lon) {
     document.querySelector('.wind').innerHTML = `Wind: ${windDirection} ${wind}mph`;
     document.querySelector('.condition').innerHTML = condition;
     document.querySelector('.location').innerHTML = `Current Forecast for ${location}`;
+    getConditions(condition);
   });
   request.send();
 }
@@ -49,7 +51,6 @@ function convertTemp (val, temp) {
 
   let check = document.querySelector('.checkbox');
   check.addEventListener('click', () => {
-    console.log(check.checked);
     convertTemp(check.checked, temp);
   });
 
@@ -63,10 +64,10 @@ function degCompass (num) {
 //api key AIzaSyCW15HLkARKoWKBePgLftUdKKQIyxaQYCM
 
 //gets input from location element
-const addy = document.querySelector('.locate')
+const addy = document.querySelector('.zip')
   addy.addEventListener('keyup',(e) => {
     let key = e.which || e.keyCode;
-    let address = addy.textContent;
+    let address = addy.value;
     console.log(address);
     if (key === 13) {
       getAddy(address);
@@ -79,8 +80,8 @@ const addy = document.querySelector('.locate')
  function getAddy (addy) {
    console.log(addy);
    if (addy == 'undefined'|| addy === null || addy === '') {
-     let locate = document.querySelector('.locate');
-     locate.innerHTML = `<span contenteditable="true" class="locate">Please enter a valid zip code</span>`;
+     let locate = document.querySelector('.zip');
+     locate.innerHTML = `<span class="locate">Please enter a valid zip code</span>`;
   } else {
     let request = new XMLHttpRequest();
     request.open('GET', `https://maps.googleapis.com/maps/api/geocode/json?address=${addy}&key=AIzaSyCW15HLkARKoWKBePgLftUdKKQIyxaQYCM`)
@@ -94,3 +95,46 @@ const addy = document.querySelector('.locate')
     request.send();
   }
  }
+
+function getConditions (con) {
+  const sun = document.querySelector('.sun');
+  const cloud = document.querySelector('.cloud');
+  const fog = document.querySelector('.fog');
+  const rain = document.querySelector('.rain');
+  const snow = document.querySelector('.snow');
+  const lightning = document.querySelector('.lightning');
+  console.log('shamon')
+
+  con.includes('clouds') ? cloudy() :
+  con.includes('clear') ? sunny() :
+  con.includes('thunderstorm') ? lightning() :
+  con.includes('snow') ? snowy() :
+  con.includes('rain') ? rainy() : sunny();
+}
+
+// weather conditions :
+const sunny = () => {
+  console.log('sunny var working');
+  document.querySelector('.sun').classList.remove('hide');
+};
+
+const cloudy = () => {
+  document.querySelector('.cloud').classList.remove('hide');
+  document.querySelector('.sun').classList.remove('hide');
+}
+
+const foggy = () => {
+  document.querySelector('.fog').classList.remove('hide');
+  document.querySelector('.cloud').classList.remove('hide');
+  document.querySelector('.sun').classList.remove('hide');
+}
+
+const rainy = () => {
+  document.querySelector('.rain').classList.remove('hide');
+  document.querySelector('.cloud').classList.remove('hide');
+}
+
+const snowy = () => {
+  document.querySelector('.snow').classList.remove('hide');
+  document.querySelector('.cloud').classList.remove('hide');
+}

@@ -66,6 +66,10 @@ $night: #0a1359;
 }
 
 .visible {
+  display: block;
+}
+
+.hide {
   display: none;
 }
 
@@ -113,6 +117,10 @@ input:checked + .slider:before {
   transform: translateY(20px);
 }
 
+.visible {
+  display: none;
+}
+
 .sun {
   position: absolute;
   top: 15%;
@@ -127,7 +135,6 @@ input:checked + .slider:before {
 }
 
 .cloud {
-  display: none;
   position: absolute;
   top: 18%;
   left: 23%;
@@ -213,7 +220,6 @@ input:checked + .slider:before {
 }
 
 .lightning {
-  display: none;
   position: absolute;
   top: 38%;
   left: 34%;
@@ -251,14 +257,12 @@ input:checked + .slider:before {
 }
 
 .rain {
-  display: none;
   position: absolute;
   top: 80%;
   left: -5%;
 }
 
 .snow {
-  display: none;
   position: absolute;
   top: 80%;
   left: -5%;
@@ -361,7 +365,6 @@ input:checked + .slider:before {
 }
 
 .fog {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
