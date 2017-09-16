@@ -232,6 +232,7 @@ input:checked + .slider:before {
   width: 50px;
   -webkit-clip-path: polygon(100% 0, 38% 0, 0 100%);
   clip-path: polygon(100% 0, 38% 0, 0 100%);
+  animation: flash 2s infinite;
 }
 
 .bolt-2 {
@@ -420,4 +421,28 @@ input:checked + .slider:before {
   100% {
     transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(200deg)
   }
+}
+@keyframes flash {
+  0% {
+    background: none;
+  }
+  10% {
+    background: white;
+  }
+
+  15% {
+    background: none;
+  }
+
+  20% {
+    background: yellow;
+  }
+
+  25% {
+    background: none;
+  }
+  100% {
+    background: none;
+  }
+
 }
