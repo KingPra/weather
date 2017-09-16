@@ -139,7 +139,7 @@ input:checked + .slider:before {
   top: 18%;
   left: 23%;
   z-index: 9;
-  animation: slide 5s ease-in-out;
+  animation: slide 5s;
 }
 
 .cloud-puff-1 {
@@ -232,7 +232,7 @@ input:checked + .slider:before {
   width: 50px;
   -webkit-clip-path: polygon(100% 0, 38% 0, 0 100%);
   clip-path: polygon(100% 0, 38% 0, 0 100%);
-  animation: flash 2s infinite;
+  animation: flash 3s infinite;
 }
 
 .bolt-2 {
@@ -426,21 +426,42 @@ input:checked + .slider:before {
   0% {
     background: none;
   }
-  10% {
+  5% {
     background: white;
   }
 
-  15% {
+  10% {
     background: none;
   }
 
-  20% {
+  15% {
     background: yellow;
   }
 
-  25% {
+  20% {
     background: none;
   }
+
+  35% {
+    background: none;
+  }
+
+  40% {
+    background: white;
+  }
+
+  45% {
+    background: none;
+  }
+
+  50% {
+    background: yellow;
+  }
+
+  55% {
+    background: none;
+  }
+
   100% {
     background: none;
   }
