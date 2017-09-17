@@ -107,15 +107,21 @@ function getConditions (con) {
 
   con.includes('clouds') ? cloudy() :
   con.includes('clear') ? sunny() :
-  con.includes('thunderstorm') ? lightning() :
+  con.includes('thunderstorm') ? thunder() :
   con.includes('snow') ? snowy() :
   con.includes('rain') ? rainy() : sunny();
 }
 
 // weather conditions :
+const background = document.querySelector('.conditions');
+const newDiv = document.createElement('div');
 const sunny = () => {
   console.log('sunny var working');
   document.querySelector('.sun').classList.remove('hide');
+  background.classList.add('sun');
+  // const currentDiv = document.querySelector('conditions');
+  // const newDiv = document.createElement('div');
+  // document.body.insertBefore(newDiv, currentDiv);
 };
 
 const cloudy = () => {
@@ -137,4 +143,9 @@ const rainy = () => {
 const snowy = () => {
   document.querySelector('.snow').classList.remove('hide');
   document.querySelector('.cloud').classList.remove('hide');
+}
+
+const thunder = () => {
+  document.querySelector('.cloud').classList.remove('hide');
+  document.querySelector('.lightning').classList.remove('hide');
 }
