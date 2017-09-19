@@ -1,5 +1,7 @@
+const moment = require('moment-timezone')
 window.addEventListener('load', () => {
   getLocation();
+  console.log(moment.tz('America/Los_Angeles'))
 })
 // this global var is needed for fahrenheit to celsius conversion to work;
 let temp;
@@ -15,7 +17,8 @@ function getWeather (lat, lon) {
     const condition = response.weather[0].description;
     const location = response.name;
     const windDirection = degCompass(response.wind.deg);
-    console.log(response);
+    const sunrise = response.sys.sunrise;
+    const sunset = response.sys.sunset;
 
     convertTemp(check.checked, temp);
     document.querySelector('.switch').classList.remove('visible');
@@ -24,6 +27,7 @@ function getWeather (lat, lon) {
     document.querySelector('.condition').innerHTML = condition;
     document.querySelector('.location').innerHTML = `Current Forecast for ${location}`;
     getConditions(condition);
+    dayOrNight(sunrise,sunset);
   });
   request.send();
 }
@@ -56,9 +60,13 @@ function convertTemp (val, temp) {
 
 //converting degrees to compass direction
 function degCompass (num) {
-  const direction = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'];
-  const degrees =  Math.trunc((num/22.5) + 0.5);
-  return direction[degrees]
+  if (num === undefined) {
+    return '';
+  } else {
+    const direction = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'];
+    const degrees =  Math.trunc((num/22.5) + 0.5);
+    return direction[degrees];
+  }
 }
 
 //api key AIzaSyCW15HLkARKoWKBePgLftUdKKQIyxaQYCM
@@ -91,6 +99,8 @@ const addy = document.querySelector('.zip')
       const lat = response.results[0].geometry.location.lat;
       const lon = response.results[0].geometry.location.lng;
       getWeather(lat, lon);
+      console.table(response.results);
+      console.log(response.results)
     })
     request.send();
   }
@@ -103,7 +113,6 @@ function getConditions (con) {
   const rain = document.querySelector('.rain');
   const snow = document.querySelector('.snow');
   const lightning = document.querySelector('.lightning');
-  console.log('shamon')
 
   con.includes('clouds') ? cloudy() :
   con.includes('clear') ? sunny() :
@@ -118,10 +127,7 @@ const newDiv = document.createElement('div');
 const sunny = () => {
   console.log('sunny var working');
   document.querySelector('.sun').classList.remove('hide');
-  background.classList.add('sun');
-  // const currentDiv = document.querySelector('conditions');
-  // const newDiv = document.createElement('div');
-  // document.body.insertBefore(newDiv, currentDiv);
+  //background.classList.add('sun');
 };
 
 const cloudy = () => {
@@ -148,4 +154,14 @@ const snowy = () => {
 const thunder = () => {
   document.querySelector('.cloud').classList.remove('hide');
   document.querySelector('.lightning').classList.remove('hide');
+}
+
+//changes background to day or night according to time
+function dayOrNight (sunrise,sunset) {
+  //this converts to whats currently returned as response:
+  const time = Date.now().toString().replace(/([0-9]{10})([0-9]*)/g, '$1');
+  if (time >= sunset && time <= sunrise) {
+    document.querySelector('.frame').classList.add('night');
+    document.querySelector('.sun').classList.add('moon');
+  }
 }

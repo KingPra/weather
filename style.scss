@@ -274,7 +274,7 @@ input:checked + .slider:before {
   .rain-small-#{$i} {
     position: absolute;
     left: (($i - 1) * 40)+px;
-    width: 5px;
+    width: 2px;
     height: 5px;
     border-radius: 50%;
     background: #cce2ff;
@@ -288,8 +288,8 @@ input:checked + .slider:before {
       content: '';
       top: -1px;
       left: 1px;
-      width: 7px;
-      height: 7px;
+      width: 1px;
+      height: 3px;
       background: #cce2ff;
       border-radius: 50%;
     }
@@ -298,7 +298,7 @@ input:checked + .slider:before {
   .rain-med-#{$i} {
     position: absolute;
     left: (($i - 1) * 40)+px;
-    width: 7px;
+    width: 3px;
     height: 7px;
     border-radius: 50%;
     animation: drop (.9 + random(2) / 15) + s linear (random(50) / 15) + s infinite;;
@@ -311,8 +311,8 @@ input:checked + .slider:before {
       top: -1px;
       left: 1px;
       content: '';
-      width: 10px;
-      height: 10px;
+      width: 3px;
+      height: 7px;
       background: #cce2ff;
       border-radius: 50%;
     }
@@ -374,6 +374,14 @@ input:checked + .slider:before {
   background: white;
   opacity: 0.8;
   z-index: 6;
+}
+
+.night {
+  background: $night;
+}
+
+.moon {
+  background: #caccb3;
 }
 
 
