@@ -228,7 +228,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 1.03333s linear 3s infinite;
+  animation: drop 0.96667s linear 0.33333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -248,7 +248,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 1.03333s linear 1.4s infinite;
+  animation: drop 0.96667s linear 0.93333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -269,7 +269,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 2.73333s infinite;
+  animation: drop 5.13333s linear 2.46667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -288,7 +288,7 @@ input:checked + .slider:before {
   left: 0px;
   width: 7px;
   height: 7px;
-  animation: drop 7.06667s linear 0.4s infinite;
+  animation: drop 7.06667s linear 12s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -309,7 +309,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 1.66667s infinite;
+  animation: drop 0.96667s linear 3.26667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -329,7 +329,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 0.8s infinite;
+  animation: drop 0.96667s linear 2.73333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -350,7 +350,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.06667s linear 1.6s infinite;
+  animation: drop 5.06667s linear 1.86667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -369,7 +369,7 @@ input:checked + .slider:before {
   left: 40px;
   width: 7px;
   height: 7px;
-  animation: drop 7.06667s linear 4s infinite;
+  animation: drop 7.06667s linear 7.6s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -390,7 +390,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 1.2s infinite;
+  animation: drop 0.96667s linear 2.26667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -410,7 +410,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 0.4s infinite;
+  animation: drop 1.03333s linear 0.06667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -431,7 +431,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 2.53333s infinite;
+  animation: drop 5.13333s linear 1s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -450,7 +450,7 @@ input:checked + .slider:before {
   left: 80px;
   width: 7px;
   height: 7px;
-  animation: drop 7.13333s linear 14.6s infinite;
+  animation: drop 7.13333s linear 8.2s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -471,7 +471,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 1.03333s linear 0.26667s infinite;
+  animation: drop 0.96667s linear 1.6s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -491,7 +491,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 2.4s infinite;
+  animation: drop 1.03333s linear 2.8s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -512,7 +512,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.06667s linear 1s infinite;
+  animation: drop 5.13333s linear 2.66667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -531,7 +531,7 @@ input:checked + .slider:before {
   left: 120px;
   width: 7px;
   height: 7px;
-  animation: drop 7.06667s linear 1.6s infinite;
+  animation: drop 7.13333s linear 16s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -552,7 +552,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 0.53333s infinite;
+  animation: drop 1.03333s linear 2.53333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -572,7 +572,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 3.13333s infinite;
+  animation: drop 1.03333s linear 1.93333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -593,7 +593,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.06667s linear 1.33333s infinite;
+  animation: drop 5.13333s linear 2.93333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -612,7 +612,7 @@ input:checked + .slider:before {
   left: 160px;
   width: 7px;
   height: 7px;
-  animation: drop 7.13333s linear 8s infinite;
+  animation: drop 7.13333s linear 15.2s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -633,7 +633,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 2.66667s infinite;
+  animation: drop 0.96667s linear 2.06667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -653,7 +653,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 2.93333s infinite;
+  animation: drop 1.03333s linear 1.26667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -674,7 +674,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 1.46667s infinite;
+  animation: drop 5.13333s linear 2.13333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -693,7 +693,7 @@ input:checked + .slider:before {
   left: 200px;
   width: 7px;
   height: 7px;
-  animation: drop 7.13333s linear 10.8s infinite;
+  animation: drop 7.06667s linear 8s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -714,7 +714,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 1.03333s linear 2.6s infinite;
+  animation: drop 0.96667s linear 0.6s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -734,7 +734,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 1.2s infinite;
+  animation: drop 1.03333s linear 0.53333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -755,7 +755,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 0.33333s infinite;
+  animation: drop 5.06667s linear 0.46667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -774,7 +774,7 @@ input:checked + .slider:before {
   left: 240px;
   width: 7px;
   height: 7px;
-  animation: drop 7.06667s linear 0.2s infinite;
+  animation: drop 7.06667s linear 3.4s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -795,7 +795,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 3.06667s infinite;
+  animation: drop 0.96667s linear 2s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -815,7 +815,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 1.6s infinite;
+  animation: drop 0.96667s linear 3.2s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -836,7 +836,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 1.26667s infinite;
+  animation: drop 5.13333s linear 0.26667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -855,7 +855,7 @@ input:checked + .slider:before {
   left: 280px;
   width: 7px;
   height: 7px;
-  animation: drop 7.13333s linear 5.2s infinite;
+  animation: drop 7.06667s linear 9.6s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -876,7 +876,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 1.53333s infinite;
+  animation: drop 1.03333s linear 1.6s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -896,7 +896,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 1.03333s linear 2.8s infinite;
+  animation: drop 1.03333s linear 1s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -917,7 +917,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 0.26667s infinite;
+  animation: drop 5.06667s linear 0.93333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -936,7 +936,7 @@ input:checked + .slider:before {
   left: 320px;
   width: 7px;
   height: 7px;
-  animation: drop 7.06667s linear 10.6s infinite;
+  animation: drop 7.06667s linear 2s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -957,7 +957,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 2s infinite;
+  animation: drop 1.03333s linear 3s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -977,7 +977,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 1.03333s linear 2.46667s infinite;
+  animation: drop 1.03333s linear 3.26667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -998,7 +998,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 2.46667s infinite;
+  animation: drop 5.06667s linear 1.66667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1017,7 +1017,7 @@ input:checked + .slider:before {
   left: 360px;
   width: 7px;
   height: 7px;
-  animation: drop 7.13333s linear 6s infinite;
+  animation: drop 7.06667s linear 14.8s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1038,7 +1038,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 1.53333s infinite;
+  animation: drop 1.03333s linear 1.6s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1058,7 +1058,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 2.4s infinite;
+  animation: drop 0.96667s linear 0.4s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1079,7 +1079,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 0.8s infinite;
+  animation: drop 5.13333s linear 0.4s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1098,7 +1098,7 @@ input:checked + .slider:before {
   left: 400px;
   width: 7px;
   height: 7px;
-  animation: drop 7.13333s linear 11.6s infinite;
+  animation: drop 7.06667s linear 10.8s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1119,7 +1119,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 1.03333s linear 0.33333s infinite;
+  animation: drop 0.96667s linear 2.86667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1139,7 +1139,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 2.26667s infinite;
+  animation: drop 0.96667s linear 0.53333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1160,7 +1160,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.06667s linear 2.8s infinite;
+  animation: drop 5.13333s linear 1.2s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1179,7 +1179,7 @@ input:checked + .slider:before {
   left: 440px;
   width: 7px;
   height: 7px;
-  animation: drop 7.13333s linear 0.8s infinite;
+  animation: drop 7.06667s linear 14.4s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1200,7 +1200,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 1.86667s infinite;
+  animation: drop 0.96667s linear 0.86667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1220,7 +1220,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 3.06667s infinite;
+  animation: drop 1.03333s linear 1.66667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1241,7 +1241,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 2.66667s infinite;
+  animation: drop 5.06667s linear 0.46667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1260,7 +1260,7 @@ input:checked + .slider:before {
   left: 480px;
   width: 7px;
   height: 7px;
-  animation: drop 7.13333s linear 9.2s infinite;
+  animation: drop 7.13333s linear 7.8s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1281,7 +1281,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 0.96667s linear 1.46667s infinite;
+  animation: drop 1.03333s linear 1.6s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1301,7 +1301,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 2.06667s infinite;
+  animation: drop 1.03333s linear 2.13333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1322,7 +1322,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.06667s linear 0.26667s infinite;
+  animation: drop 5.06667s linear 3.06667s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1341,7 +1341,7 @@ input:checked + .slider:before {
   left: 520px;
   width: 7px;
   height: 7px;
-  animation: drop 7.13333s linear 0.8s infinite;
+  animation: drop 7.06667s linear 8.8s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1362,7 +1362,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 1.03333s linear 0.33333s infinite;
+  animation: drop 0.96667s linear 0.33333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1382,7 +1382,7 @@ input:checked + .slider:before {
   width: 3px;
   height: 7px;
   border-radius: 50%;
-  animation: drop 0.96667s linear 1.4s infinite;
+  animation: drop 1.03333s linear 0.53333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
@@ -1403,7 +1403,7 @@ input:checked + .slider:before {
   height: 5px;
   border-radius: 50%;
   background: #cce2ff;
-  animation: drop 5.13333s linear 3.13333s infinite;
+  animation: drop 5.13333s linear 1.33333s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 5; }
@@ -1422,7 +1422,7 @@ input:checked + .slider:before {
   left: 560px;
   width: 7px;
   height: 7px;
-  animation: drop 7.06667s linear 12.6s infinite;
+  animation: drop 7.06667s linear 12.8s infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   z-index: 6; }
