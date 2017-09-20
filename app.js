@@ -1,7 +1,7 @@
 const moment = require('moment-timezone')
 window.addEventListener('load', () => {
   getLocation();
-  console.log(moment.tz('America/Los_Angeles'))
+  console.log(moment(Date.now()).format('HH'))
 })
 // this global var is needed for fahrenheit to celsius conversion to work;
 let temp;
@@ -28,6 +28,9 @@ function getWeather (lat, lon) {
     document.querySelector('.location').innerHTML = `Current Forecast for ${location}`;
     getConditions(condition);
     dayOrNight(sunrise,sunset);
+     console.log(`now: ${moment(Date.now()).format('HH:MM:SS')}`);
+     console.log(`sunrise: ${moment(sunrise).format('HH:MM:SS')}`);
+     console.log(`sunset: ${moment(sunset).format('HH:MM:SS')}`);
   });
   request.send();
 }
@@ -160,8 +163,11 @@ const thunder = () => {
 function dayOrNight (sunrise,sunset) {
   //this converts to whats currently returned as response:
   const time = Date.now().toString().replace(/([0-9]{10})([0-9]*)/g, '$1');
-  if (time >= sunset && time <= sunrise) {
+  if (time <= sunset && time >= sunrise) {
     document.querySelector('.frame').classList.add('night');
     document.querySelector('.sun').classList.add('moon');
+    console.log(time)
+  } else {
+    console.log('else ehere')
   }
 }
