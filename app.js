@@ -1,7 +1,6 @@
 const moment = require('moment-timezone')
 window.addEventListener('load', () => {
   getLocation();
-  console.log(moment(Date.now()).format('HH'))
 })
 // this global var is needed for fahrenheit to celsius conversion to work;
 let temp;
@@ -17,8 +16,8 @@ function getWeather (lat, lon) {
     const condition = response.weather[0].description;
     const location = response.name;
     const windDirection = degCompass(response.wind.deg);
-    const sunrise = response.sys.sunrise;
-    const sunset = response.sys.sunset;
+    const sunrise = response.sys.sunrise * 1000;
+    const sunset = response.sys.sunset * 1000;
 
     convertTemp(check.checked, temp);
     document.querySelector('.switch').classList.remove('visible');
@@ -28,9 +27,6 @@ function getWeather (lat, lon) {
     document.querySelector('.location').innerHTML = `Current Forecast for ${location}`;
     getConditions(condition);
     dayOrNight(sunrise,sunset);
-     console.log(`now: ${moment(Date.now()).format('HH:MM:SS')}`);
-     console.log(`sunrise: ${moment(sunrise).format('HH:MM:SS')}`);
-     console.log(`sunset: ${moment(sunset).format('HH:MM:SS')}`);
   });
   request.send();
 }
@@ -159,15 +155,14 @@ const thunder = () => {
   document.querySelector('.lightning').classList.remove('hide');
 }
 
-//changes background to day or night according to time
+//changes background to night according to time
 function dayOrNight (sunrise,sunset) {
-  //this converts to whats currently returned as response:
-  const time = Date.now().toString().replace(/([0-9]{10})([0-9]*)/g, '$1');
-  if (time <= sunset && time >= sunrise) {
+  const time = Date.now();
+  if (time >= sunset && time <= sunrise) {
     document.querySelector('.frame').classList.add('night');
     document.querySelector('.sun').classList.add('moon');
     console.log(time)
   } else {
-    console.log('else ehere')
+    console.log('should be day time now')
   }
 }
