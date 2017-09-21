@@ -68,8 +68,6 @@ function degCompass (num) {
   }
 }
 
-//api key AIzaSyCW15HLkARKoWKBePgLftUdKKQIyxaQYCM
-
 //gets input from location element
 const addy = document.querySelector('.zip')
   addy.addEventListener('keyup',(e) => {
@@ -98,8 +96,6 @@ const addy = document.querySelector('.zip')
       const lat = response.results[0].geometry.location.lat;
       const lon = response.results[0].geometry.location.lng;
       getWeather(lat, lon);
-      console.table(response.results);
-      console.log(response.results)
     })
     request.send();
   }
@@ -126,7 +122,6 @@ const newDiv = document.createElement('div');
 const sunny = () => {
   console.log('sunny var working');
   document.querySelector('.sun').classList.remove('hide');
-  //background.classList.add('sun');
 };
 
 const cloudy = () => {
@@ -161,8 +156,5 @@ function dayOrNight (sunrise,sunset) {
   if (time >= sunset && time <= sunrise) {
     document.querySelector('.frame').classList.add('night');
     document.querySelector('.sun').classList.add('moon');
-    console.log(time)
-  } else {
-    console.log('should be day time now')
   }
 }
